@@ -1,3 +1,4 @@
+#!/bin/env groovy
 def call () {
     withCredentials([usernamePassword(credentialsId:"Dockerhub", usernameVariable:"user",passwordVariable:"pass")]) {
         sh "docker build . -t tolux17tech/demo:3.48"
