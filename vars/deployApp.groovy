@@ -1,5 +1,6 @@
-#!/usr/bin/env groovy
+#!/usr/bin/env groovy 
 
-def call (){
-     echo "Building gv script"
-}
+
+def call ()  { 
+    echo "Application is building"
+    }
