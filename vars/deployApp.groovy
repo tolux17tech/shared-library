@@ -1,4 +1,6 @@
 #!/usr/bin/env groovy
+
+import com.example.Docker
  def call () {
-    echo "Application is building"
+    return new Docker(this).deployApp()
  }
