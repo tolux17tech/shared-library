@@ -13,11 +13,20 @@ class Docker implements Serializable {
     }
 
     def buildDockerImage (String IMAGENAME) {
-        script.withCredentials([script.usernamePassword(credentialsId:"Dockerhub", usernameVariable:"user",passwordVariable:"pass")]) {
+        
         script.sh "docker build . -t $IMAGENAME"
+        
+    }
+
+    def dockerLogin() {
+        script.withCredentials([script.usernamePassword(credentialsId:"Dockerhub", usernameVariable:"user",passwordVariable:"pass")]) {
         script.sh "echo $script.pass | docker login -u $script.user --password-stdin"
-        script.sh "docker push $IMAGENAME"
+        
     
        }
+    } 
+
+    def dockerPush() {
+        script.sh "docker push $IMAGENAME"
     }
 }
