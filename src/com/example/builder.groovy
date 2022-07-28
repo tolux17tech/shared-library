@@ -3,12 +3,12 @@
 
 Package com.example 
 
-class Docker implements Serializable {
+class builder implements Serializable {
     
     
     def script 
 
-    Docker(script) {
+    builder(script) {
         this.script = script
     }
 
