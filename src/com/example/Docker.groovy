@@ -27,5 +27,13 @@ class Docker implements Serializable {
         script.echo "Application is deploying like yesterday"
     }
 
+    def increase(){
+        script.echo "Incerementing app-version .."
+        script.sh "mvn build-helper:parse-version versions:set\
+        -DnewVersion=\\\${parsedVersion.nextMajorVersion}.\\\${parsedVersion.nextMinorVersion}.\\\${parsedVersion.nextIncrementalVersion}\
+        versions:commit"
+
+    }
+
 
 }
