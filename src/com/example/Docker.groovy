@@ -1,4 +1,4 @@
-#!/bin/env groovy
+#!/usr/bin/env groovy
  
 
 package com.example 
@@ -36,7 +36,7 @@ class Docker implements Serializable {
        }
     } 
 
-    def dockerPush() {
+    def dockerPush(String IMAGENAME) {
         script.sh "docker push $IMAGENAME"
     }
 }

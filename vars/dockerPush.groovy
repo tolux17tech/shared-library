@@ -1,4 +1,4 @@
-#!/bin/env groovy 
+#!/usr/bin/env groovy 
 
 import com.example.Docker
 

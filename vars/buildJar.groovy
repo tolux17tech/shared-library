@@ -1,4 +1,4 @@
-#!/bin/env groovy
+#!/usr/bin/env groovy
 def call () {
     sh "mvn package"
     echo "Building gv script"
