@@ -1,14 +1,14 @@
 #!/bin/env groovy
  
 
-Package com.example 
+package com.example 
 
-class builder implements Serializable {
+class Docker implements Serializable {
     
     
     def script 
 
-    builder(script) {
+    Docker(script) {
         this.script = script
     }
 
