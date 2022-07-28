@@ -24,7 +24,7 @@ class Docker implements Serializable {
     }
 
     def deployApp(){
-        echo "Application is deploying like yesterday"
+        script.echo "Application is deploying like yesterday"
     }
 
 
