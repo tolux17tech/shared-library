@@ -13,12 +13,12 @@ class Docker implements Serializable {
     }
 
 
-    def buildJar () {
-        script.sh "mvn package"
-        script.sh "echo Building gv script"
-        script.sh "echo My name is ${Name}"
-        script.sh "echo My name is ${params.type}"
-}
+//     def buildJar () {
+//         script.sh "mvn package"
+//         script.sh "echo Building gv script"
+//         script.sh "echo My name is ${Name}"
+//         script.sh "echo My name is ${params.type}"
+// }
     
     
 
