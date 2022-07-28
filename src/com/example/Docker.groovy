@@ -14,5 +14,14 @@ class Docker implements Serializable {
         script.sh "mvn package"
     }
 
+    def buildImage (){
+    script.echo "Building the Docker image"
+            script.withCredentials([script.usernamePassword(credentialsId: "Dockerhub", usernameVariable: "user", passwordVariable: "pass")]){
+                script.sh "docker build . -t  tolux17tech/demo:8.5"
+                script.sh "echo $script.pass | docker login -u $script.user --password-stdin"
+                script.sh "docker push tolux17tech/demo:8.5"
+            }
+}
+
 
 }
