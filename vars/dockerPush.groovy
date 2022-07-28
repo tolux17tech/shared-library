@@ -3,5 +3,5 @@
 import com.example.Docker
 
 def call(){
-    return new Docker(this).dockerPush()
+    return new Docker(this).dockerPush(IMAGENAME)
 }

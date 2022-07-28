@@ -14,9 +14,9 @@ class Docker implements Serializable {
         script.sh "mvn package"
     }
 
-    def buildImage (){
+    def buildImage (String IMAGENAME){
     script.echo "Building the Docker image"
-                script.sh "docker build . -t  tolux17tech/demo:8.5"    
+                script.sh "docker build . -t  $IMAGENAME"    
             }
     
 
@@ -27,8 +27,8 @@ class Docker implements Serializable {
 
     }
 
-    def dockerPush(){
-        script.sh "docker push tolux17tech/demo:8.5"
+    def dockerPush(String IMAGENAME){
+        script.sh "docker push $IMAGENAME"
 
     }
 
