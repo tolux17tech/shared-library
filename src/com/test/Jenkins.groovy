@@ -10,11 +10,11 @@ class Jenkins implements  Serializable {
     }
 
     def buildImage () {
-        echo "Building the Docker image"
-    withCredentials([usernamePassword(credentialsId: "Dockerhub", usernameVariable: "user", passwordVariable: "pass")]){
-        sh "docker build . -t  tolux17tech/demo:8.5"
-        sh "echo $pass | docker login -u $user --password-stdin"
-        sh "docker push tolux17tech/demo:8.5"
+    script.echo "Building the Docker image"
+    script.withCredentials([script.usernamePassword(credentialsId: "Dockerhub", usernameVariable: "user", passwordVariable: "pass")]){
+        script.sh "docker build . -t  tolux17tech/demo:12.5"
+        script.sh "echo $script.pass | docker login -u $script.user --password-stdin"
+        script.sh "docker push tolux17tech/demo:12.5"
         }
     }
 }
