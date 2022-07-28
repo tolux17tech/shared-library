@@ -5,7 +5,7 @@ import com.example.Docker
 def call () {
 
 
-    return this Docker(this).increase()
+    return new Docker(this).increase()
 
     // echo "Incerementing app-version .."
     // sh "mvn build-helper:parse-version versions:set\
