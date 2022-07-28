@@ -47,9 +47,9 @@ class Docker implements Serializable {
         -DnewVersion=\\\${parsedVersion.nextMajorVersion}.\\\${parsedVersion.nextMinorVersion}.\\\${parsedVersion.nextIncrementalVersion}\
         versions:commit"
 
-        def matcher = readFile('pom.xml') =~ '<version>(.+)</version>'
-        def version = matcher [0][1]
-        script.env.IMAGENAME = "tolux17tech/demo:$version.$BUILD_NUMBER"
+        // def matcher = readFile('pom.xml') =~ '<version>(.+)</version>'
+        // def version = matcher [0][1]
+        // script.env.IMAGENAME = "tolux17tech/demo:$version.$BUILD_NUMBER"
 
     }
 
